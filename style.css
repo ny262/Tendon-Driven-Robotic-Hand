@@ -31,8 +31,6 @@
     color: #ffffff;
     font-weight: 700;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.2s ease;
 }
 
 .nav-links {
@@ -44,14 +42,11 @@
 .nav-links a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: color 0.2s ease;
 }
 
 .nav-logo:hover,
 .nav-links a:hover {
-    color: #cbd5e1;
+    color: #666666;
 }
 
 body {
