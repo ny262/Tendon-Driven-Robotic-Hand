@@ -72,7 +72,7 @@
       <tr>
         <td>Anatomical Accuracy</td>
         <td>Within <strong>10%</strong> variance</td>
-        <td>Matches standard adult anthropometric averages for precise phalanx length and finger spans. <em><ahref="#appendix" class="remote-link">(Appendix)</a></em></td>
+        <td>Matches standard adult anthropometric averages for precise phalanx length and finger spans. <em><a href="#references" class="remote-link">Appendix</a></em></td>
       </tr>
     </tbody>
   </table>
@@ -191,7 +191,9 @@
 
     <ul>
         <li>Shifting away from flat, single-axis hinges toward angled joint rotations to replicate realistic finger paths.</li>
+        <br></<br> 
         <li>Moving from a single, shared motor line to a dedicated multi-servo system to allow individual finger control.</li>
+        <br></<br> 
         <li>Routing internal pathways for a continuous tendon cable that acts like a pulley to actively pull the finger back open during servo reversal.</li>
     </ul>
       
@@ -201,7 +203,9 @@
             <h3>Phalangeal Linkage Design</h3>
             <ul>
               <li>An interlocking clevis design stops lateral joint wobble and increases overall structural stability.</li>
+               <br></<br> 
               <li>Counterbored pivot holes allow the hinge pins to sit completely flush, keeping the outer profile smooth.</li>
+              <br></<br>   
               <li>Internal routing channels run through the core to guide the tendon lines smoothly.</li>
             </ul>
           </td>
@@ -218,7 +222,9 @@
             <h3>Palm Casing and Tendon Alignment Channels</h3>
             <ul>
               <li>Designed as a unified chassis to allow straightforward assembly, eliminating reliance on fasteners</li>
-              <li>Integrated alignment channels guide each finger along its natural flexion path and prevent the tendon lines from tangling or slipping.</li>            </ul>
+              <br></<br> 
+              <li>Integrated alignment channels guide each finger along its natural flexion path and prevent the tendon lines from tangling or slipping.</li>            
+            </ul>
           </td>
           <td style="width: 40%;">
             <img src="Images/palm-casing.png" alt="Palm Casing CAD" style="width: 100%; height: auto; display: block; max-width: 400px; margin: 0 auto;">
@@ -238,7 +244,7 @@
           </td>
           <td style="width: 40%;">
             <img src="Images/forearm-chassis.png" alt="Forearm Chassis CAD" style="width: 100%; height: auto; display: block; max-width: 400px; margin: 0 auto;">
-            <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Figure 5:</strong> Close up of the palm casing design and the tendon alignment channels. Self-sourced.</p>
+            <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Figure 6:</strong> Self-sourced.</p>
           </td>
         </tr>
       </table>
@@ -247,8 +253,92 @@
 
 <button type="button" class="collapsible" style="border-left: 20px solid #0056b3;"><h2>Phase 3: 3D Printing, Wiring, & Physical Testing</h2></button>
     <div class="content">
+
+    <button type="button" class="collapsible" style="border-left: 20px solid #0056b3;"><h3>Component and Material Selection Justification Matrix</h3></button>
+    <div class="content">
         
+    <table>
+        <thead>
+            <tr>
+                <th>Component / Material</th>
+                <th>Selected Option</th>
+                <th>Considered Alternatives</th>
+                <th>Engineering Justification</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Structural Substrate</strong></td>
+                <td>PLA</td>
+                <td>PETG, ABS, Nylon</td>
+                <td><strong>Optimizes budget and print accuracy</strong> since the hand primarily experiences compressive loads that do not require high-cost engineering plastics.</td>
+            </tr>
+            <tr>
+                <td><strong>Tendon Actuation Medium</strong></td>
+                <td>Polyester Upholstery Thread</td>
+                <td>Nylon Bracelet Elastic</td>
+                <td><strong>Eliminates mechanical backlash and position lag</strong> by offering high tensile strength with near-zero material stretch under load.</td>
+            </tr>
+            <tr>
+                <td><strong>Joint Fasteners & Axles</strong></td>
+                <td>M2 Socket Head Cap Screws</td>
+                <td>Custom Pins, Metal Clevis Pins</td>
+                <td><strong>Serves a dual mechanical purpose</strong> where the smooth shoulders act as low-friction hinge pins and the threads self-tap directly into the PLA.</td>
+            </tr>
+            <tr>
+                <td><strong>Actuator Units</strong></td>
+                <td>Standard Micro Servos (SG90/MG90S)</td>
+                <td>High-Torque Servos</td>
+                <td><strong>Minimizes overall cost, space, and weight requirements</strong> because the zero-stretch tendon ensures near-100% force delivery to the joints.</td>
+            </tr>
+        </tbody>
+    </table>
+    
     </div>
+    
+    <br></br>
+        
+    <button type="button" class="collapsible" style="border-left: 20px solid #0056b3;"><h3>Design Evolution and Iterative Testing</h3></button>
+        <div class="content">
+        
+        <p>Physical testing highlighted issues in early iterations of components. How these discoveries influenced the final design are detailed below:</p>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Previous Iteration</th>
+                    <th>Final Design</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="width: 50%;">
+                        <img src="Images/previous-palm-casing.png" alt="Previous Palm Casing" style="width: 100%; height: auto; display: block; max-width: 400px; margin: 0 auto;">
+                        <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Figure 7: </strong> Image of previous split chassis palm casing design. Self-sourced.</p>
+                    </td>
+                    <td style="width: 50%;">
+                        <img src="Images/updated-palm-casing.png" alt="Updated Palm Casing" style="width: 100%; height: auto; display: block; max-width: 400px; margin: 0 auto;">
+                        <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Figure 8:</strong> Self-sourced.</p>
+                    </td>
+                </tr>
+                   <tr>
+                    <td style="width: 50%;">
+                        <img src="Images/previous-phalanx-design.png" alt="Previous Phalanx Design" style="width: 100%; height: auto; display: block; max-width: 400px; margin: 0 auto;">
+                        <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Figure 9: </strong> Image of previous s. Self-sourced.</p>
+                    </td>
+                    <td style="width: 50%;">
+                        <img src="Images/updated-phalanx-design.png" alt="Updated Phalanx Design" style="width: 100%; height: auto; display: block; max-width: 400px; margin: 0 auto;">
+                        <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Figure 10:</strong> Self-sourced.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+       
+        </div>
+
+        <br></br>
+    
+    </div> 
 
 <button type="button" id="references" class="collapsible"> <h2>References</h2> </button>
   <div class="content">
