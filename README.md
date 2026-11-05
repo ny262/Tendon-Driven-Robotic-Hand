@@ -1,6 +1,6 @@
 ## Tendon-Driven Robotic Hand
 
-![License: MIT](https://shields.io)
+[![License: MIT](https://shields.io)](https://opensource.org)
 
 > [!WARNING]
 > Active development: Physical testing and code updating.
