@@ -1,7 +1,9 @@
 ## Tendon-Driven Robotic Hand
 
-[> [!WARNING]
-> Active development: Physical testing and code updating.]
+![License: MIT](https://shields.io)
+
+> [!WARNING]
+> Active development: Physical testing and code updating.
 
 ### Summary
 An **anthropomorphic** robotic hand driven by a servo-actuated tendon loop, utilising cardboard failure analytics to inform a high-rigidity CAD architecture with a **scalability pathway for sEMG muscle-sensor integration**.
