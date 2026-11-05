@@ -15,7 +15,7 @@ An **anthropomorphic** robotic hand driven by a servo-actuated tendon loop, util
 
 ### Project Breakdown
 - 📐 **Design & Prototyping::** Cardboard low-fidelity modelling, Autodesk Fusion 360, and 3D printing.
-- 🧪 **Testing & Success Metrics:** Target response latency **≤ 1.0s**, anatomical dimensions within **10%** of adult anthropometric averages, and closed-loop kinematic retention cycles.
+- 🧪 **Testing & Success Metrics:** Target response latency **≤ 1.0s**, anatomical dimensions within **10%** of adult anthropometric averages, and contracting to form a completely closed fist.
 - 📈 **Iterative Design Evolutions (From Low-Fi Prototyping):**
   - Structural: Swapped warped cardboard profiles for rigid interlocking clevis linkages to eliminate lateral joint wobble.
   - Kinematics: Engineered an internal channel pulley route to prevent tendon binding and force joint flexion.
