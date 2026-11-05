@@ -5,10 +5,6 @@
     <td><b>License</b></td>
     <td><code>MIT</code></td>
   </tr>
-  <tr>
-    <td><b>Python</b></td>
-    <td><code>3.10+</code></td>
-  </tr>
 </table>
 
 > [!WARNING]
