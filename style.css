@@ -157,15 +157,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.carousel-wrapper {
-  max-width: 500px;
-  margin: 20px auto;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  background-color: #ffffff;
-}
-
 .carousel {
   display: flex;
   overflow-x: auto;
@@ -179,7 +170,7 @@ a:hover {
 }
 
 .carousel-slide {
-  min-width: 100%;
+  min-width: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,5 +203,5 @@ a:hover {
 }
 
 .carousel-btn:hover {
-  background-color: #003875;
+  color: #666666;
 }
