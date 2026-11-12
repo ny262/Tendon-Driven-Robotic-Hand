@@ -50,15 +50,19 @@ document.querySelectorAll('.remote-link').forEach(link => {
 });
 
   const carousel = document.getElementById('carousel');
+  const slides = carousel.querySelectorAll('img');
+  let currentIndex = 0;
 
   function scrollCarousel(direction) {
-    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+    currentIndex += direction;
 
-    if (direction === 1 && carousel.scrollLeft >= maxScroll - 5) {
-      carousel.scrollTo({ left: 0 });
-    } else if (direction === -1 && carousel.scrollLeft <= 5) {
-      carousel.scrollTo({ left: maxScroll });
+    if (currentIndex >= slides.length) {
+      currentIndex = 0;
+      carousel.scrollTo({ left: 0, behavior: 'instant' });
+    } else if (currentIndex < 0) {
+      currentIndex = slides.length - 1;
+      carousel.scrollTo({ left: currentIndex * carousel.clientWidth, behavior: 'instant' });
     } else {
-      carousel.scrollBy({ left: direction * carousel.clientWidth });
+      carousel.scrollTo({ left: currentIndex * carousel.clientWidth, behavior: 'smooth' });
     }
   }
