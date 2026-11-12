@@ -50,28 +50,37 @@ document.querySelectorAll('.remote-link').forEach(link => {
 });
 
   const carousel = document.getElementById('carousel');
-  const total = carousel.children.length - 1; // Excludes the duplicate slide
-  let index = 0;
+  const slides = Array.from(carousel.children);
+
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[slides.length - 1].cloneNode(true);
+  carousel.appendChild(firstClone);
+  carousel.insertBefore(lastClone, slides[0]);
+
+  let index = 1;
+  let isMoving = false;
+
+  carousel.style.transition = 'none';
+  carousel.style.transform = 'translateX(-100%)';
 
   function moveSlide(step) {
-    if (index === 0 && step === -1) {
-      // Jump instantly to the duplicate at the end, then slide left to the last image
-      carousel.style.transition = 'none';
-      index = total;
-      carousel.style.transform = `translateX(-${index * 100}%)`;
-      carousel.offsetHeight; // Forces browser to register the instant jump
-    }
+    if (isMoving) return;
+    isMoving = true;
 
     index += step;
     carousel.style.transition = 'transform 0.4s ease-in-out';
     carousel.style.transform = `translateX(-${index * 100}%)`;
-
-    // Once it finishes sliding onto the duplicate first image, snap invisibly back to index 0
-    if (index === total) {
-      setTimeout(() => {
-        carousel.style.transition = 'none';
-        index = 0;
-        carousel.style.transform = `translateX(0%)`;
-      }, 400);
-    }
   }
+
+  carousel.addEventListener('transitionend', () => {
+    if (index === slides.length + 1) {
+      carousel.style.transition = 'none';
+      index = 1;
+      carousel.style.transform = 'translateX(-100%)';
+    } else if (index === 0) {
+      carousel.style.transition = 'none';
+      index = slides.length;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+    isMoving = false;
+  });
