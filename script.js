@@ -49,8 +49,16 @@ document.querySelectorAll('.remote-link').forEach(link => {
     });
 });
 
-const carousel = document.getElementById('carousel');
+  const carousel = document.getElementById('carousel');
 
-function scrollCarousel(direction) {
-  carousel.scrollBy({ left: direction * carousel.clientWidth });
-}
+  function scrollCarousel(direction) {
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+    if (direction === 1 && carousel.scrollLeft >= maxScroll - 5) {
+      carousel.scrollTo({ left: 0 });
+    } else if (direction === -1 && carousel.scrollLeft <= 5) {
+      carousel.scrollTo({ left: maxScroll });
+    } else {
+      carousel.scrollBy({ left: direction * carousel.clientWidth });
+    }
+  }
