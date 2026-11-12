@@ -49,11 +49,11 @@ document.querySelectorAll('.remote-link').forEach(link => {
     });
 });
 
-const track = document.getElementById('track');
-  const total = track.children.length;
-  let index = 0;
+const track = document.getElementById('carousel');
+const total = track.children.length;
+let index = 0;
 
-  function moveSlide(step) {
-    index = (index + step + total) % total;
-    track.style.transform = `translateX(-${index * 100}%)`;
-  }
+function moveSlide(step) {
+  index = (index + step + total) % total;
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
