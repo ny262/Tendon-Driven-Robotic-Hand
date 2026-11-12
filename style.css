@@ -160,23 +160,27 @@ a:hover {
 .carousel-wrapper {
   width: 50%;
   margin: 20px auto;
+  overflow: hidden;
+  background-color: transparent;
 }
 
 .carousel {
-  overflow: hidden;
-  border: 2px solid #0056b3;
-  border-radius: 8px;
-}
-
-.carousel-track {
   display: flex;
-  transition: transform 0.4s ease-in-out;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
-.carousel-track img {
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel img {
   min-width: 100%;
   width: 100%;
   height: auto;
+  scroll-snap-align: start;
   display: block;
 }
 
@@ -199,5 +203,5 @@ a:hover {
 }
 
 .carousel-btn:hover {
-  color: #cccccc;
+ color: #cccccc;
 }
