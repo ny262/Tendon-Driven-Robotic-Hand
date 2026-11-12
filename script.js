@@ -49,3 +49,8 @@ document.querySelectorAll('.remote-link').forEach(link => {
     });
 });
 
+const carousel = document.getElementById('carousel');
+
+function scrollCarousel(direction) {
+  carousel.scrollBy({ left: direction * carousel.clientWidth });
+}
