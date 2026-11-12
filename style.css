@@ -119,14 +119,6 @@ tr:nth-child(even) {
   background-color: #e6f0fa;
 }
 
-.clinical-context {
-  font-style: italic;
-  color: #555555;
-  font-size: 14px;
-  margin-top: 4px;
-  margin-bottom: 12px;
-}
-
 .content { 
   max-height: 0; 
   overflow: hidden; 
