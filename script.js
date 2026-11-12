@@ -50,10 +50,28 @@ document.querySelectorAll('.remote-link').forEach(link => {
 });
 
   const carousel = document.getElementById('carousel');
-  const total = carousel.children.length;
+  const total = carousel.children.length - 1; // Excludes the duplicate slide
   let index = 0;
 
   function moveSlide(step) {
-    index = (index + step + total) % total;
+    if (index === 0 && step === -1) {
+      // Jump instantly to the duplicate at the end, then slide left to the last image
+      carousel.style.transition = 'none';
+      index = total;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+      carousel.offsetHeight; // Forces browser to register the instant jump
+    }
+
+    index += step;
+    carousel.style.transition = 'transform 0.4s ease-in-out';
     carousel.style.transform = `translateX(-${index * 100}%)`;
+
+    // Once it finishes sliding onto the duplicate first image, snap invisibly back to index 0
+    if (index === total) {
+      setTimeout(() => {
+        carousel.style.transition = 'none';
+        index = 0;
+        carousel.style.transform = `translateX(0%)`;
+      }, 400);
+    }
   }
