@@ -162,18 +162,18 @@ a:hover {
   margin: 20px auto;
 }
 
-.carousel {
+.carousel-frame {
   overflow: hidden;
   border: 2px solid #0056b3;
   border-radius: 8px;
 }
 
-.carousel-track {
+.carousel {
   display: flex;
   transition: transform 0.4s ease-in-out;
 }
 
-.carousel-track img {
+.carousel img {
   min-width: 100%;
   width: 100%;
   height: auto;
@@ -201,3 +201,4 @@ a:hover {
 .carousel-btn:hover {
   color: #cccccc;
 }
+
