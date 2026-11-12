@@ -51,14 +51,18 @@
 <div class="carousel-wrapper">
   <button class="btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
   
-  <div class="carousel" id="carousel">
-    <img src="Images/relaxed-full.png" alt="Full view of relaxed hand">
-    <img src="Images/flexed-full.png" alt="Full view of flexed hand">
-    <img src="Images/relaxed-close.png" alt="Close-up view of relaxed hand">
-    <img src="Images/flexed-close.png" alt="Close-up view of flexed hand">  
-  </div>
-
-  <button class="btn next" onclick="scrollCarousel(1)">&#10095;</button>
+    <div class="carousel" id="carousel">
+        <img src="Images/relaxed-full.png" alt="Full view of relaxed hand">
+        <img src="Images/flexed-full.png" alt="Full view of flexed hand">
+        <img src="Images/relaxed-close.png" alt="Close-up view of relaxed hand">
+        <img src="Images/flexed-close.png" alt="Close-up view of flexed hand">  
+    </div>
+        
+    <div class="carousel-controls">
+        <button class="carousel-btn" onclick="scrollCarousel(-1)" aria-label="Previous image">&lt;</button>
+        <button class="carousel-btn" onclick="scrollCarousel(1)" aria-label="Next image">&gt;</button>
+    </div>
+    
 </div>
 
 
