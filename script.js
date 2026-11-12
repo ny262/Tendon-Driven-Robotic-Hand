@@ -49,20 +49,11 @@ document.querySelectorAll('.remote-link').forEach(link => {
     });
 });
 
-  const carousel = document.getElementById('carousel');
-  const slides = carousel.querySelectorAll('img');
-  let currentIndex = 0;
+const track = document.getElementById('track');
+  const total = track.children.length;
+  let index = 0;
 
-  function scrollCarousel(direction) {
-    currentIndex += direction;
-
-    if (currentIndex >= slides.length) {
-      currentIndex = 0;
-      carousel.scrollTo({ left: 0, behavior: 'instant' });
-    } else if (currentIndex < 0) {
-      currentIndex = slides.length - 1;
-      carousel.scrollTo({ left: currentIndex * carousel.clientWidth, behavior: 'instant' });
-    } else {
-      carousel.scrollTo({ left: currentIndex * carousel.clientWidth, behavior: 'smooth' });
-    }
+  function moveSlide(step) {
+    index = (index + step + total) % total;
+    track.style.transform = `translateX(-${index * 100}%)`;
   }
