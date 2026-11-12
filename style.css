@@ -157,6 +157,13 @@ a:hover {
   text-decoration: underline;
 }
 
+.carousel-wrapper {
+  width: 75%;
+  margin: 20px auto;
+  overflow: hidden;
+  background-color: transparent;
+}
+
 .carousel {
   display: flex;
   overflow-x: auto;
@@ -169,17 +176,11 @@ a:hover {
   display: none;
 }
 
-.carousel-slide {
-  min-width: 75%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
-}
-
-.carousel-slide img {
-  width: 75%;
+.carousel img {
+  min-width: 100%;
+  width: 100%;
   height: auto;
+  scroll-snap-align: start;
   display: block;
 }
 
@@ -187,8 +188,7 @@ a:hover {
   display: flex;
   justify-content: center;
   gap: 12px;
-  padding: 12px;
-  background-color: #ffffff;
+  padding: 12px 0;
 }
 
 .carousel-btn {
@@ -203,5 +203,5 @@ a:hover {
 }
 
 .carousel-btn:hover {
-  color: #666666;
+  background-color: #003875;
 }
