@@ -109,22 +109,23 @@
     <div class="content">
 
       <p>The design of the robotic hand is based on the anatomical structure of the human hand, specifically focusing on the muscle-tendon system that enables finger movement.</p>
-      <table>
+        <ul>
+          <li>
+            The human muscle-tendon system sits in the forearm and anchors at the wrist carpal ligament, providing the mechanical foundation for finger curling.
+          </li>
+          <li>
+            Muscle contractions pull these tendons downward, rotating the phalangeal joints to close the fingers into a fist.
+          </li>
+          <li>
+            The main finger flexor is a deep forearm muscle mass that splits into four separate tendon lines to control each finger independently.
+          </li>
+        </ul>
+        
+        <table>
         <tr>
           <td>
-            <ul>
-              <li>
-                The human muscle-tendon system sits in the forearm and anchors at the wrist carpal ligament, providing the mechanical foundation for finger curling.
-              </li>
-              <li>
-                Muscle contractions pull these tendons downward, rotating the phalangeal joints to close the fingers into a fist.
-              </li>
-              <li>
-                The main finger flexor is a deep forearm muscle mass that splits into four separate tendon lines to control each finger independently.
-              </li>
-            </ul>
             <img src="Images/flexor-muscle-anatomy.png" alt="Hand Anatomy" style="float: left; width: 100%; height: auto; display: block; max-width: 800px; margin: 20px auto;">
-              <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Figure 1:</strong> Diagram of the forearm muscle anatomy, highlighting the major muscles that facilitate finger flexion. Source: <a href="#references" class="remote-link">[1]</a></p>
+            <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Figure 1:</strong> Diagram of the forearm muscle anatomy, highlighting the major muscles that facilitate finger flexion. Source: <a href="#references" class="remote-link">[1]</a></p>
           </td>
           <td>
             <img src="Images/dorsal-view.png" alt="Dorsal View of Muscle and Tendon Anatomy" style="width: 100%; height: auto; display: block; max-width: 350px; margin: 0 auto;">
@@ -161,9 +162,11 @@
           </tr>
         </tbody>
       </table>
-      <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Table 2:</strong> Mechanical Limitations Gauged from the Low-Fidelity Prototype and Solutions</p>
+      <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Table 2:</strong> Mechanical limitations determined from the low-fidelity prototype and solutions</p>
       <div style="margin-top: 40px;"></div>
 
+      <h3>Next Steps</h3>
+        
       <p>While the cardboard model worked as a quick proof of concept, the testing process highlighted several mechanical limitations that helped guide the final CAD design choices.</p>
 
       <div style="margin-top: 40px;"></div>
@@ -190,7 +193,7 @@
           <tr>
             <td>Fingers stay permanently bent</td>
             <td>The cardboard creases after a few pulls and loses its natural spring.</td>
-            <td>Use a closed-loop tendon system that physically pulls the fingers back open when the servo reverses.</td>
+            <td>Use an elastic / spring mechanism to pull spring back when the servo is no longer exertinf a force</td>
           </tr>
           <tr>
             <td>Servo motor topples over under a heavy load</td>
@@ -199,6 +202,7 @@
           </tr>
         </tbody>
       </table>
+      <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Table 3:</strong> Summary of identified problems and potential next steps</p>  
     </div>
   
   </div>
@@ -213,7 +217,9 @@
         <li style= "font-size:16px">Moving from a single, shared motor line to a dedicated multi-servo system to allow individual finger control.</li>
         <li style= "font-size:16px">Routing internal pathways for a continuous tendon cable that acts like a pulley to actively pull the finger back open during servo reversal.</li>
     </ul>
-      
+
+      <h3>Design Rationale</h3>  
+        
       <table>
         <tr>
           <td style="width: 60%;">
@@ -272,7 +278,7 @@
 <button type="button" class="collapsible" style="border-left: 20px solid #0056b3;"><h2>Phase 3: 3D Printing, Wiring, & Physical Testing</h2></button>
     <div class="content">
 
-    <button type="button" class="collapsible" style="border-left: 20px solid #0056b3;"><h3>Component and Material Selection Justification Matrix</h3></button>
+    <button type="button" class="collapsible" style="border-left: 20px solid #0056b3;"><h3>Component and Material Selection Justification</h3></button>
     <div class="content">
         
     <table>
@@ -288,7 +294,7 @@
             <tr>
                 <td><strong>Structural Substrate</strong></td>
                 <td>PLA</td>
-                <td>PETG, ABS, Nylon</td>
+                <td>PETG, ABS</td>
                 <td><strong>Optimises budget and print accuracy</strong> since the hand primarily experiences compressive loads that do not require high-cost engineering plastics.</td>
             </tr>
             <tr>
@@ -320,9 +326,9 @@
         <table>
         <thead>
             <tr>
-                <th style="width: 10%;"><h3>Component</h3></th>
-                <th style="width: 45%;"><h3>The Problem</h3></th>
-                <th style="width: 45%;"><h3>The Engineering Fix</h3></th>
+                <th style="width: 20%;"><h3>Component</h3></th>
+                <th style="width: 40%;"><h3>The Problem</h3></th>
+                <th style="width: 40%;"><h3>The Engineering Fix</h3></th>
             </tr>
         </thead>
         <tbody>
@@ -349,13 +355,13 @@
                 </td>
                 <td>
                     <br>
-                    <img src="Images/previous-phalanx-design.png" alt="Previous Phalanx Design" style="width: 100%; max-width: 400px; height: auto;">
+                    <img src="Images/previous-phalanx-design.png" alt="Previous Phalanx Design" style="display: block; margin-left: auto; margin-right: auto; width: 100%; max-width: 400px; height: auto;">
                     <p style="font-size: 12px; margin-top: 5px;"><strong>Figure 9:</strong> Image of previous phalanx design. Self-sourced.</p>
                     <p>The original finger walls were too thin to handle structural forces, and there was no mechanical anchor point to secure the joint tensioning lines.</p>
                 </td>
                 <td>
                     <br>
-                    <img src="Images/updated-phalanx-design.png" alt="Updated Phalanx Design" style="width: 100%; max-width: 400px; height: auto;">
+                    <img src="Images/updated-phalanx-design.png" alt="Updated Phalanx Design" style="display: block; margin-left: auto; margin-right: auto; width: 100%; max-width: 400px; height: auto;">
                     <p style="font-size: 12px; margin-top: 5px;"><strong>Figure 10:</strong> Updated phalanx design. Self-sourced.</p>
                     <p>Scaled up wall thickness by a factor of 1.4 for structural integrity and integrated a functional mounting hole into the distal phalanx for a 12mm M2 screw anchor to hold the tendon and return elastic.</p>
                 </td>
@@ -367,10 +373,10 @@
     <button type="button" class="collapsible" style="border-left: 20px solid #0056b3;"><h3>Actuation Circuit</h3></button>
     <div class="content">
 
-    <img src="Images/circuit.png" alt="Image of Circuit" style="width: 60%; height: auto;">
+    <img src="Images/circuit.png" alt="Image of Circuit" style="display: block; margin-left: auto; margin-right: auto; width: 60%; height: auto;">
     <p style="font-size: 12px; margin-top: 5px;"><strong>Figure 11:</strong> Robotic hand actuation circuit, including arduino microcontroller. Self-sourced.</p>    
         
-    <img src="Images/arduino-code.png" alt="Screengrab of Arduino code" style="width: 60%; height: auto;">
+    <img src="Images/arduino-code.png" alt="Screengrab of Arduino code" style="display: block; margin-left: auto; margin-right: auto; width: 60%; height: auto;">
     <p style="font-size: 12px; margin-top: 5px;"><strong>Figure 12:</strong> Arduino code to control synchronised servo movement. Self-sourced.</p>    
                                                                                                                                                                  
     </div>  
@@ -383,7 +389,6 @@
     <p> <strong>[2]</strong> Jones O. Flexor pollicis longus - attachments - actions - TeachMeAnatomy [Internet]. teachmeanatomy.info. 2022 [cited 2026 Oct 20]. Available from: <a href="https://teachmeanatomy.info/encyclopaedia/f/flexor-pollicis-longus/" target="_blank">https://teachmeanatomy.info/encyclopaedia/f/flexor-pollicis-longus/ </a> </p>
     <p> <strong>[3]</strong> Bakirci S, Çay M. Height estimation by evaluating morphometric measurements of hands and fingers. Med Science. 2022;11(3):1336–9. p. 1337, Table 1, Descriptive statistical data obtained from finger lengths and other morphometric measurements. Available from: <a href="https://www.researchgate.net/publication/363172251_Height_estimation_by_evaluating_morphometric_measurements_of_hands_and_fingers" target="_blank">https://www.researchgate.net/publication/363172251_Height_estimation_by_evaluating_morphometric_measurements_of_hands_and_fingers</a></p>
     <p> <strong>[4]</strong> Miller AS, Gwyn R, Bhattacharjee D, Banks LN. Fibonacci’s Mathematical Sequence Predicts Functional and Actual Lengths of the Phalanges of the Hand. Journal of Nature and Science of Medicine. 2021 Jan;4(1):58–63.</p>
-    <p> <strong>[5]</strong> </p>
   </div>
 
 <button type="button" id="appendix" class="collapsible"> <h2>Appendix</h2> </button>
