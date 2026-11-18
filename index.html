@@ -48,6 +48,8 @@
   </tr>
 </table>
 
+<h2 align="center">Current Design</h2> 
+    
 <div class="carousel-wrapper">
   <div class="carousel-frame">
     <div class="carousel" id="carousel">
@@ -109,6 +111,7 @@
     <div class="content">
 
       <p>The design of the robotic hand is based on the anatomical structure of the human hand, specifically focusing on the muscle-tendon system that enables finger movement.</p>
+        <div style = "background-color:#e6f0fa; border-radius: 6px; border-color: #0056b3">
         <ul>
           <li>
             The human muscle-tendon system sits in the forearm and anchors at the wrist carpal ligament, providing the mechanical foundation for finger curling.
@@ -120,18 +123,26 @@
             The main finger flexor is a deep forearm muscle mass that splits into four separate tendon lines to control each finger independently.
           </li>
         </ul>
+        </div>
         
         <table>
         <tr>
           <td>
             <img src="Images/flexor-muscle-anatomy.png" alt="Hand Anatomy" style="float: left; width: 100%; height: auto; display: block; max-width: 800px; margin: 20px auto;">
-            <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Figure 1:</strong> Diagram of the forearm muscle anatomy, highlighting the major muscles that facilitate finger flexion. Source: <a href="#references" class="remote-link">[1]</a></p>
           </td>
           <td>
             <img src="Images/dorsal-view.png" alt="Dorsal View of Muscle and Tendon Anatomy" style="width: 100%; height: auto; display: block; max-width: 350px; margin: 0 auto;">
             <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Figure 2:</strong> Dorsal view of finger anatomy, focusing on the flexor digitorum profundus and its tendon lines. Source: <a href="#references" class="remote-link">[2]</a></p>
           </td>
         </tr>
+        <tr style="background-color: #ffffff">
+          <td>
+            <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Figure 1:</strong> Diagram of the forearm muscle anatomy, highlighting the major muscles that facilitate finger flexion. Source: <a href="#references" class="remote-link">[1]</a></p>  
+          </td>
+          <td>
+            <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Figure 2:</strong> Dorsal view of finger anatomy, focusing on the flexor digitorum profundus and its tendon lines. Source: <a href="#references" class="remote-link">[2]</a></p>
+          </td>   
+        </tr>    
       </table>
     </div>
 
@@ -165,6 +176,8 @@
       <p style="font-size: 12px; margin-top: 8px; line-height: 1.4;"><strong>Table 2:</strong> Mechanical limitations determined from the low-fidelity prototype and solutions</p>
       <div style="margin-top: 40px;"></div>
 
+      <br> 
+        
       <h3>Next Steps</h3>
         
       <p>While the cardboard model worked as a quick proof of concept, the testing process highlighted several mechanical limitations that helped guide the final CAD design choices.</p>
@@ -211,13 +224,13 @@
     <div class="content">
       
       <p>The objective was to translate standard human hand dimensions into a functional mechanism. The digital design focused on overcoming three main structural constraints:</p>
-
+    <div style = "background-color:#e6f0fa; border-radius: 6px; border-color: #0056b3">
     <ul>
         <li style= "font-size:16px">Shifting away from flat, single-axis hinges toward angled joint rotations to replicate realistic finger paths.</li>
         <li style= "font-size:16px">Moving from a single, shared motor line to a dedicated multi-servo system to allow individual finger control.</li>
         <li style= "font-size:16px">Routing internal pathways for a continuous tendon cable that acts like a pulley to actively pull the finger back open during servo reversal.</li>
     </ul>
-
+    </div>
       <h3>Design Rationale</h3>  
         
       <table>
@@ -372,13 +385,24 @@
 
     <button type="button" class="collapsible" style="border-left: 20px solid #0056b3;"><h3>Actuation Circuit</h3></button>
     <div class="content">
-
-    <img src="Images/circuit.png" alt="Image of Circuit" style="display: block; margin-left: auto; margin-right: auto; width: 60%; height: auto;">
-    <p style="font-size: 12px; margin-top: 5px;"><strong>Figure 11:</strong> Robotic hand actuation circuit, including arduino microcontroller. Self-sourced.</p>    
-        
-    <img src="Images/arduino-code.png" alt="Screengrab of Arduino code" style="display: block; margin-left: auto; margin-right: auto; width: 60%; height: auto;">
-    <p style="font-size: 12px; margin-top: 5px;"><strong>Figure 12:</strong> Arduino code to control synchronised servo movement. Self-sourced.</p>    
-                                                                                                                                                                 
+        <table>
+            <tr>
+                <td style="width: 50%">
+                    <img src="Images/circuit.png" alt="Image of Circuit" style="height: auto;">
+                </td>
+                <td style="width: 50%">
+                    <img src="Images/arduino-code.png" alt="Screengrab of Arduino code" style="height: auto;">
+                </td>
+            </tr>
+            <tr> 
+                <td style="background: #ffffff">
+                    <p align="center" style="font-size: 12px;"><strong>Figure 11:</strong> Robotic hand actuation circuit, including arduino microcontroller. Self-sourced.</p>    
+                </td>
+                <td style="background: #ffffff">
+                    <p align="center" style="font-size: 12px;"><strong>Figure 12:</strong> Arduino code to control synchronised servo movement. Self-sourced.</p>
+                </td>
+            </tr>    
+        </table>                                                                                                                                                             
     </div>  
     
 </div> 
